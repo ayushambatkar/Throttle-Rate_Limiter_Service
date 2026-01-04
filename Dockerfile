@@ -1,5 +1,5 @@
 # Build stage
-FROM python:3.13.3-slim as builder
+FROM python:3.13-slim as builder
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 
 # Production stage
-FROM python:3.13.3-slim as production
+FROM python:3.13-slim as production
 
 WORKDIR /app
 
