@@ -284,7 +284,7 @@ curl "http://localhost:8000/health"
 {
   "status": "healthy",
   "redis_connected": true,
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
 ```
 
