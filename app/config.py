@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     # Application
     app_name: str = "Rate Limiter API"
-    app_version: str = "1.0.2"
+    app_version: str = "1.0.4"
     debug: bool = False
 
     # Redis Configuration
