@@ -400,13 +400,25 @@ async def log_requests(request: Request, call_next):
     return response
 
 
-@app.get(
-    "/",
-)
+from fastapi.responses import HTMLResponse
+@app.get("/")
 async def root():
-    return {
-        "message": "Welcome to Throttle: Distributed Rate Limiter API",
-    }
+    return HTMLResponse(content="""
+    <html>
+        <head>
+            <title>Throttle Rate Limiter</title>
+        </head>
+        <body>
+            <h1>Throttle: Distributed Rate Limiter API</h1>
+            <p>A production-ready rate limiting service using FastAPI and Redis.</p>
+            <ul>
+                <li><a href="/docs">API Documentation (Swagger UI)</a></li>
+                <li><a href="/redoc">API Documentation (ReDoc)</a></li>
+                <li><a href="/health">Health Check</a></li>
+            </ul>
+        </body>
+    </html>
+    """)
 
 
 if __name__ == "__main__":
