@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
     # Application
-    app_name: str = "Rate Limiter API"
+    app_name: str = "Throttle: Rate Limiter API"
     app_version: str = "1.0.4"
     debug: bool = False
 

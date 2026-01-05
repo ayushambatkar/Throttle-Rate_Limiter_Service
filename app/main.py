@@ -90,7 +90,7 @@ settings = get_settings()
 app = FastAPI(
     title=settings.app_name,
     description="""
-## Distributed Rate Limiter API
+## Throttle: Distributed Rate Limiter API
 
 A production-ready rate limiting service supporting multiple algorithms.
 
