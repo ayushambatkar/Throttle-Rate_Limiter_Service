@@ -400,12 +400,21 @@ async def log_requests(request: Request, call_next):
     return response
 
 
+@app.get(
+    "/",
+)
+async def root():
+    return {
+        "message": "Welcome to Throttle: Distributed Rate Limiter API",
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(
         "app.main:app",
-        host="0.0.0.0",
+        # host="0.0.0.0",
         port=8000,
         reload=settings.debug,
         log_level=settings.log_level.lower(),
